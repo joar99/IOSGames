@@ -9,6 +9,9 @@ import SwiftUI
 
 struct GameRowView: View {
     
+    let customGold = Color("customGold", bundle: nil)
+    let customWhite = Color("customWhite", bundle: nil)
+    
     var game: Game
     
     @State private var isFavorite = false
@@ -21,35 +24,45 @@ struct GameRowView: View {
             }
         placeholder: {
             ProgressView()
+                .tint(customWhite)
+            
         }
                 .aspectRatio(1, contentMode: .fit)
                 //.frame(width: 50, height: 50)
                 //.cornerRadius(10)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-            Text(game.name)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(customGold, lineWidth: 2)
+                )
+                Text(game.name)
                 .bold()
+                .foregroundColor(customWhite)
             
             Spacer()
             
             Button(action: {
                 
-                if isFavorite {
-                    //DatabaseManager.shared.printGamesTable()
-                    //DatabaseManager.shared.insertGame(game)
+                if (DatabaseManager.shared.gameExists(withID: game.id)) {
+                    DatabaseManager.shared.removeGame(withID: game.id)
                 } else {
-                    //DatabaseManager.shared.deleteGame(game)
-                    //DatabaseManager.shared.printGamesTable()
+                    DatabaseManager.shared.saveGame(game)
                 }
+                isFavorite.toggle()
             }) {
                 Image(systemName: isFavorite ? "heart.fill" : "heart")
-                    .foregroundColor(isFavorite ? .red : .black)
+                    .foregroundColor(isFavorite ? customGold : customWhite)
             }
             
         }
+        .padding()
         .listRowSeparator(.hidden)
         .listRowBackground(
-            Color(.brown)
-                .opacity(0.1))
+            Color(.black)
+                .opacity(0.6))
+        .onAppear {
+            isFavorite = DatabaseManager.shared.gameExists(withID: game.id)
+        }
         
     }
 }

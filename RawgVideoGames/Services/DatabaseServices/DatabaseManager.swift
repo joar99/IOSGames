@@ -66,6 +66,18 @@ class DatabaseManager {
             }
         }
     
+    func removeGame(withID id: Int) {
+        
+        let game = gamesTable.filter(self.id == id)
+        
+        do {
+            try db.run(game.delete())
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     func fetchAllGames() -> [Game] {
         
         var favoriteGames: [Game] = []
@@ -87,6 +99,20 @@ class DatabaseManager {
                 print(error.localizedDescription)
             }
         return favoriteGames
+        
+    }
+    
+    func gameExists(withID id: Int) -> Bool {
+        
+        let game = gamesTable.filter(self.id == id)
+        
+        do {
+            let count = try db.scalar(game.count)
+            return count > 0
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
         
     }
 }
