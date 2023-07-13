@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Game: Codable, Identifiable {
+struct Game: Codable, Identifiable, Hashable {
     
     var id: Int
     var name: String

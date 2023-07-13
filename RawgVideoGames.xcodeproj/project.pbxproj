@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		402270952A6091EB006FC6DF /* MainMenuBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402270942A6091EB006FC6DF /* MainMenuBoxView.swift */; };
 		40280CCF2A4B500400907A00 /* RawgVideoGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40280CCE2A4B500400907A00 /* RawgVideoGamesApp.swift */; };
 		40280CD12A4B500400907A00 /* ExploreGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40280CD02A4B500400907A00 /* ExploreGamesView.swift */; };
 		40280CD32A4B500500907A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40280CD22A4B500500907A00 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		402270942A6091EB006FC6DF /* MainMenuBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBoxView.swift; sourceTree = "<group>"; };
 		40280CCB2A4B500400907A00 /* RawgVideoGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawgVideoGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40280CCE2A4B500400907A00 /* RawgVideoGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawgVideoGamesApp.swift; sourceTree = "<group>"; };
 		40280CD02A4B500400907A00 /* ExploreGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreGamesView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				40AA3D112A51C7D4004CB1A7 /* MainView.swift */,
 				40A5EA912A54B93B004BD903 /* BackButtonView.swift */,
 				40833B942A5AEAEF005CA343 /* GameView.swift */,
+				402270942A6091EB006FC6DF /* MainMenuBoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				40280CDF2A4B51B700907A00 /* GameViewModel.swift in Sources */,
 				40A5EA922A54B93B004BD903 /* BackButtonView.swift in Sources */,
+				402270952A6091EB006FC6DF /* MainMenuBoxView.swift in Sources */,
 				40AA3D122A51C7D4004CB1A7 /* MainView.swift in Sources */,
 				40280CD12A4B500400907A00 /* ExploreGamesView.swift in Sources */,
 				40AA3D102A51BEFE004CB1A7 /* FavoriteGamesView.swift in Sources */,

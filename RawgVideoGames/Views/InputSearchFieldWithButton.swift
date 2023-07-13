@@ -25,7 +25,7 @@ struct InputSearchFieldWithButton: View {
             TextField("Search Games", text: $inputText)
                 .textFieldStyle(.roundedBorder)
                 .padding()
-                .foregroundColor(customWhite)
+                //.foregroundColor(customWhite)
             
             Spacer()
             
