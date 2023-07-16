@@ -22,7 +22,7 @@ class DatabaseManager {
     
     static let shared = DatabaseManager()
     
-    private init() {
+    public init() {
             let path = NSSearchPathForDirectoriesInDomains(
                 .documentDirectory, .userDomainMask, true
             ).first!
@@ -102,6 +102,26 @@ class DatabaseManager {
         
     }
     
+    func fetchGame(withID id: Int) -> Game? {
+        let game = gamesTable.filter(self.id == id)
+
+        do {
+            if let row = try db.pluck(game) {
+                return Game(
+                    id: row[self.id],
+                    name: row[name],
+                    released: row[released],
+                    background_image: row[background_image],
+                    rating: row[rating],
+                    ratings_count: row[ratings_count]
+                )
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+
     func gameExists(withID id: Int) -> Bool {
         
         let game = gamesTable.filter(self.id == id)
@@ -114,5 +134,40 @@ class DatabaseManager {
             return false
         }
         
+    }
+    
+    //PLEASE NOTE: The code written here is used for Unit Testing purposes with the mock database
+    //GETTERS FOR UNIT TESTING PURPOSES AND MOCK DATABASE
+    
+    func getId() -> Expression<Int> {
+        return id
+    }
+        
+    func getName() -> Expression<String> {
+        return name
+    }
+        
+    func getReleased() -> Expression<String?> {
+        return released
+    }
+        
+    func getBackgroundImage() -> Expression<String?> {
+        return background_image
+    }
+        
+    func getRating() -> Expression<Double?> {
+        return rating
+    }
+        
+    func getRatingsCount() -> Expression<Int?> {
+        return ratings_count
+    }
+    
+    func getGamesTable() -> Table {
+            return gamesTable
+        }
+    
+    func setConnection(_ connection: Connection) {
+        db = connection
     }
 }
