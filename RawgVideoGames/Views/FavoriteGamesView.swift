@@ -41,6 +41,7 @@ struct FavoriteGamesView: View {
             .onAppear {
                 games = dbManager.fetchAllGames()
             }
+            .accessibilityIdentifier("FavoriteListOfGames")
         }
 }
 

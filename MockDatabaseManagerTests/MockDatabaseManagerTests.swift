@@ -144,33 +144,5 @@ final class MockDatabaseManagerTests: XCTestCase {
         XCTAssertEqual(actualGameExistsAfter, expectedGameExistsAfter, "Failed to check the game existence after saving it in the database.")
     }
 
-
-
-
-    
-    
-    
-    /*func testSaveGame() {
-        
-        let mockGame = Game(
-            id: 1,
-            name: "Mock Game",
-            released: "2023-01-01",
-            background_image: "https://example.com/mock.jpg",
-            rating: 4.5,
-            ratings_count: 100
-        )
-        
-        mockDatabaseManager.saveGame(mockGame)
-        
-        let savedGames = mockDatabaseManager.fetchAllGames()
-        XCTAssertEqual(savedGames.count, 1)
-        XCTAssertEqual(savedGames[0].id, mockGame.id)
-        XCTAssertEqual(savedGames[0].name, mockGame.name)
-        XCTAssertEqual(savedGames[0].released, mockGame.released)
-        XCTAssertEqual(savedGames[0].background_image, mockGame.background_image)
-        XCTAssertEqual(savedGames[0].rating, mockGame.rating)
-        XCTAssertEqual(savedGames[0].ratings_count, mockGame.ratings_count)
-    }*/
 }
 

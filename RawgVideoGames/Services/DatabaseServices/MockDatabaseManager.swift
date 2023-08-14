@@ -37,25 +37,4 @@ class MockDatabaseManager: DatabaseManager {
         }
     }
     
-    /*func saveGameMock(_ game: Game) -> Bool {
-        do {
-            try getDatabase().run(getGamesTable().insert(or: .replace,
-                                                         getId() <- game.id,
-                                                         getName() <- game.name,
-                                                         getReleased() <- game.released,
-                                                         getBackgroundImage() <- game.background_image,
-                                                         getRating() <- game.rating,
-                                                         getRatingsCount() <- game.ratings_count
-                                                        ))
-            print("Insert successful. Rows changed: \(getDatabase().changes)")
-            return true
-        } catch {
-            print("Insert error: \(error.localizedDescription)")
-            //print("Error message: \(getDatabase().errorMessage)")
-            return false
-        }
-        
-    }*/
-    
-    
 }

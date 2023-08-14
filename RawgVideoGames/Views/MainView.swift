@@ -26,10 +26,12 @@ struct MainView: View {
                            Spacer()
                            
                            MainMenuBoxView(geometry: geometry, destination: FavoriteGamesView(), systemName: "gamecontroller", text: "Favorites")
+                               .accessibilityIdentifier("MainMenuFavoriteButton")
                            
                            Spacer()
                            
                            MainMenuBoxView(geometry: geometry, destination: ExploreGamesView(), systemName: "gamecontroller", text: "Explore")
+                               .accessibilityIdentifier("MainMenuExploreButton")
                            
                            Spacer()
                        }

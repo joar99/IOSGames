@@ -30,6 +30,7 @@ struct ExploreGamesView: View {
                 
                 Spacer()
             }
+            .accessibilityIdentifier("ExploreGamesHeader")
             
             InputSearchFieldWithButton(inputText: $searchText, viewModel: viewModel)
             
@@ -67,50 +68,6 @@ struct ExploreGamesView: View {
         }
     }
 }
-
-    /* body: some View {
-        
-        VStack {
-            HStack {
-                BackButtonView()
-                
-                Spacer()
-                
-                Text("Explore New Games")
-                    .bold()
-                    .foregroundColor(customWhite)
-                
-                Spacer()
-                
-            }
-            InputSearchFieldWithButton(inputText: $searchText, viewModel: viewModel)
-                List {
-                    ForEach(viewModel.games) { game in
-                        GameRowView(game: game)
-                            .frame(height: 100)
-                            .background(customDarkGray)
-                            .cornerRadius(20)
-                            .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(customBlack)
-                            )
-                                .onAppear {
-                                    if viewModel.isLastGame(game) {
-                                        viewModel.fetchGames()
-                                    }
-                                }
-                        }
-                    }
-                .listStyle(PlainListStyle())
-                }
-                .background(.black)
-                //.padding()
-                .onAppear {
-                    viewModel.fetchGames()
-                }
-                .navigationBarBackButtonHidden()
-    }
-}*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

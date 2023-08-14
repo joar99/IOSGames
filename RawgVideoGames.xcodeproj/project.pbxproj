@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400DA4102A88FED5004F2579 /* RawgVideoGamesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DA40F2A88FED5004F2579 /* RawgVideoGamesUITests.swift */; };
+		400DA4122A88FED5004F2579 /* RawgVideoGamesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DA4112A88FED5004F2579 /* RawgVideoGamesUITestsLaunchTests.swift */; };
+		400DA4192A89001A004F2579 /* MainView_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400DA4182A89001A004F2579 /* MainView_UITests.swift */; };
 		402270952A6091EB006FC6DF /* MainMenuBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402270942A6091EB006FC6DF /* MainMenuBoxView.swift */; };
 		40280CCF2A4B500400907A00 /* RawgVideoGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40280CCE2A4B500400907A00 /* RawgVideoGamesApp.swift */; };
 		40280CD12A4B500400907A00 /* ExploreGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40280CD02A4B500400907A00 /* ExploreGamesView.swift */; };
@@ -30,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		400DA4132A88FED5004F2579 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40280CC32A4B500400907A00 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40280CCA2A4B500400907A00;
+			remoteInfo = RawgVideoGames;
+		};
 		40FF5A212A648E120070C686 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 40280CC32A4B500400907A00 /* Project object */;
@@ -40,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		400DA40D2A88FED5004F2579 /* RawgVideoGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RawgVideoGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		400DA40F2A88FED5004F2579 /* RawgVideoGamesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawgVideoGamesUITests.swift; sourceTree = "<group>"; };
+		400DA4112A88FED5004F2579 /* RawgVideoGamesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawgVideoGamesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		400DA4182A89001A004F2579 /* MainView_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView_UITests.swift; sourceTree = "<group>"; };
 		402270942A6091EB006FC6DF /* MainMenuBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuBoxView.swift; sourceTree = "<group>"; };
 		40280CCB2A4B500400907A00 /* RawgVideoGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawgVideoGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40280CCE2A4B500400907A00 /* RawgVideoGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawgVideoGamesApp.swift; sourceTree = "<group>"; };
@@ -61,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		400DA40A2A88FED5004F2579 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40280CC82A4B500400907A00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,11 +100,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400DA40E2A88FED5004F2579 /* RawgVideoGamesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				400DA40F2A88FED5004F2579 /* RawgVideoGamesUITests.swift */,
+				400DA4182A89001A004F2579 /* MainView_UITests.swift */,
+				400DA4112A88FED5004F2579 /* RawgVideoGamesUITestsLaunchTests.swift */,
+			);
+			path = RawgVideoGamesUITests;
+			sourceTree = "<group>";
+		};
 		40280CC22A4B500400907A00 = {
 			isa = PBXGroup;
 			children = (
 				40280CCD2A4B500400907A00 /* RawgVideoGames */,
 				40FF5A1E2A648E120070C686 /* MockDatabaseManagerTests */,
+				400DA40E2A88FED5004F2579 /* RawgVideoGamesUITests */,
 				40280CCC2A4B500400907A00 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +125,7 @@
 			children = (
 				40280CCB2A4B500400907A00 /* RawgVideoGames.app */,
 				40FF5A1D2A648E120070C686 /* MockDatabaseManagerTests.xctest */,
+				400DA40D2A88FED5004F2579 /* RawgVideoGamesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +211,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		400DA40C2A88FED5004F2579 /* RawgVideoGamesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400DA4172A88FED5004F2579 /* Build configuration list for PBXNativeTarget "RawgVideoGamesUITests" */;
+			buildPhases = (
+				400DA4092A88FED5004F2579 /* Sources */,
+				400DA40A2A88FED5004F2579 /* Frameworks */,
+				400DA40B2A88FED5004F2579 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400DA4142A88FED5004F2579 /* PBXTargetDependency */,
+			);
+			name = RawgVideoGamesUITests;
+			productName = RawgVideoGamesUITests;
+			productReference = 400DA40D2A88FED5004F2579 /* RawgVideoGamesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		40280CCA2A4B500400907A00 /* RawgVideoGames */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40280CD92A4B500500907A00 /* Build configuration list for PBXNativeTarget "RawgVideoGames" */;
@@ -226,6 +277,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					400DA40C2A88FED5004F2579 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 40280CCA2A4B500400907A00;
+					};
 					40280CCA2A4B500400907A00 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -253,11 +308,19 @@
 			targets = (
 				40280CCA2A4B500400907A00 /* RawgVideoGames */,
 				40FF5A1C2A648E120070C686 /* MockDatabaseManagerTests */,
+				400DA40C2A88FED5004F2579 /* RawgVideoGamesUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		400DA40B2A88FED5004F2579 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40280CC92A4B500400907A00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +340,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		400DA4092A88FED5004F2579 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400DA4102A88FED5004F2579 /* RawgVideoGamesUITests.swift in Sources */,
+				400DA4192A89001A004F2579 /* MainView_UITests.swift in Sources */,
+				400DA4122A88FED5004F2579 /* RawgVideoGamesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		40280CC72A4B500400907A00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -311,6 +384,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		400DA4142A88FED5004F2579 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 40280CCA2A4B500400907A00 /* RawgVideoGames */;
+			targetProxy = 400DA4132A88FED5004F2579 /* PBXContainerItemProxy */;
+		};
 		40FF5A222A648E120070C686 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 40280CCA2A4B500400907A00 /* RawgVideoGames */;
@@ -319,6 +397,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		400DA4152A88FED5004F2579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joar.RawgVideoGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RawgVideoGames;
+			};
+			name = Debug;
+		};
+		400DA4162A88FED5004F2579 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joar.RawgVideoGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RawgVideoGames;
+			};
+			name = Release;
+		};
 		40280CD72A4B500500907A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -526,6 +636,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		400DA4172A88FED5004F2579 /* Build configuration list for PBXNativeTarget "RawgVideoGamesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400DA4152A88FED5004F2579 /* Debug */,
+				400DA4162A88FED5004F2579 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		40280CC62A4B500400907A00 /* Build configuration list for PBXProject "RawgVideoGames" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
